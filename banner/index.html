@@ -152,6 +152,12 @@
  .ticker{min-height:clamp(32px,19cqh,48px)}
  .pill{min-height:clamp(29px,17cqh,43px);font-size:clamp(10px,5.5cqh,14px)}
 }
+
+/* Subtitle readability: responsive, without collisions at narrow widths. */
+.subtitle{font-size:clamp(8px,3.5cqw,11px);line-height:1.25}
+@container (min-aspect-ratio:1/1){.subtitle{font-size:clamp(10px,1.65cqw,15px)}}
+@container (min-aspect-ratio:6/5){.subtitle{font-size:clamp(10px,1.65cqw,16px)}}
+@container (min-aspect-ratio:5/4) and (max-height:320px){.subtitle{font-size:clamp(9px,2.5cqh,12px)}}
 </style></head><body><a class="ad" id="ad" href="https://platina.myslo.ru/" target="_blank" rel="noopener"><div class="layout"><header class="header"><div class="wordmark" id="wordmark" aria-label="ПЛАТИНА"></div><div class="subtitle">ПРОЕКТ «СЛОБОДЫ» · БИЗНЕС-ПРЕМИЯ</div></header><main class="main"><div class="date" id="date"><span>ПРИЁМ КАНДИДАТОВ</span><span>ДО 30 ОКТЯБРЯ</span></div><div class="headline"><span class="head-a">КОГО</span><span class="head-b">НЕ ХВАТАЕТ</span><em>В СОТНЕ?</em></div><div class="description">Предложите человека, который двигает бизнес Тульской области.</div></main><div class="ticker" aria-label="Предложить кандидата — Платиновая сотня"><div class="ticker-track" id="ticker-track"><div class="ticker-set"><span class="pill pill-light">ПРЕДЛОЖИТЬ КАНДИДАТА</span><span class="pill pill-dark">ПЛАТИНОВАЯ СОТНЯ</span><span class="pill pill-light">ПРЕДЛОЖИТЬ КАНДИДАТА</span><span class="pill pill-dark">ПЛАТИНОВАЯ СОТНЯ</span></div><div class="ticker-set" aria-hidden="true"><span class="pill pill-light">ПРЕДЛОЖИТЬ КАНДИДАТА</span><span class="pill pill-dark">ПЛАТИНОВАЯ СОТНЯ</span><span class="pill pill-light">ПРЕДЛОЖИТЬ КАНДИДАТА</span><span class="pill pill-dark">ПЛАТИНОВАЯ СОТНЯ</span></div></div></div></div></a><script nonce="%request.eid1%">(function(){
 var ad=document.getElementById('ad'),host=document.getElementById('wordmark'),date=document.getElementById('date'),chars=[...'ПЛАТИНА'];
 var ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.setAttribute('preserveAspectRatio','xMidYMid meet');svg.setAttribute('role','img');svg.setAttribute('aria-label','ПЛАТИНА');host.appendChild(svg);
