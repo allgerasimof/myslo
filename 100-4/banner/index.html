@@ -30,5 +30,5 @@ function resizePills(){var w=ad.clientWidth,h=ad.clientHeight,layout=ad.querySel
 
 var ro=window.ResizeObserver?new ResizeObserver(function(){requestAnimationFrame(resizePills)}):null;if(ro)ro.observe(ad);window.addEventListener('resize',resizePills);document.fonts&&document.fonts.ready?document.fonts.ready.then(setup):setup();requestAnimationFrame(frame);
 ad.addEventListener('pointermove',function(e){var rect=host.getBoundingClientRect();if(e.clientY>=rect.top&&e.clientY<=rect.bottom){hovered=true;target=Math.max(0,Math.min(6,Math.round((e.clientX-rect.left)/rect.width*6)))}else hovered=false});ad.addEventListener('pointerleave',function(){hovered=false});
-ad.addEventListener('click',function(e){e.preventDefault();var ref='%banner.reference_mrc_user1%',target='%banner.target%';window.open(ref.charAt(0)==='%'?'https://platina.myslo.ru/':ref+'https://platina.myslo.ru/',target.charAt(0)==='%'?'_blank':target,'noopener')});
+ad.addEventListener('click',function(e){e.preventDefault();window.open('%banner.reference_mrc_user1%','%banner.target%','noopener')});
 })();</script></body></html>
