@@ -22,14 +22,26 @@
  .main{padding:8px 0}
 }
 
+.ad::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: clamp(112px, 36cqh, 260px);
+  background: linear-gradient(to top, #000 0%, rgba(0, 0, 0, .9) 50%, transparent 100%);
+  pointer-events: none;
+}
+.layout {
+  --footer-gap: 8px;
+  z-index: 1;
+  padding-bottom: var(--footer-gap);
+}
+.ticker { min-height: 0; }
+
 .sponsors {
   flex: none;
   align-self: center;
   max-width: 100%;
-  margin-bottom: clamp(5px, 1.5cqh, 10px);
-  padding: 6px 8px;
-  border-radius: 8px;
-  background: rgba(11, 16, 24, .88);
+  margin-bottom: var(--footer-gap);
 }
 .sponsors img {
   display: block;
@@ -37,7 +49,6 @@
   height: auto;
 }
 @container (max-height: 320px) {
-  .sponsors { padding: 4px 7px; margin-bottom: 5px; }
   .sponsors img { width: min(205px, calc(100cqw - 40px)); }
 }
 </style></head><body><a class="ad" id="ad" href="%banner.reference_mrc_user1%" target="%banner.target%" rel="noopener"><div class="scene" aria-hidden="true"></div><div class="layout"><header class="header"><div class="wordmark" id="wordmark" aria-label="ПЛАТИНА"></div><div class="subtitle">ПРОЕКТ «СЛОБОДЫ» · БИЗНЕС-ПРЕМИЯ</div></header><main class="main"><div class="date" id="date"><span>ПРИЁМ КАНДИДАТОВ</span><span>ДО 30 НОЯБРЯ</span></div><div class="headline"><span class="head-a">КОГО</span><span class="head-b">НЕ ХВАТАЕТ</span><em>В СОТНЕ?</em></div><div class="description">Предложите человека, который двигает бизнес Тульской области.</div></main><div class="sponsors"><img src="assets/platina_100_5_sponsors.png" width="246" height="37" alt="Спонсоры: Газпром газораспределение Тула, Альфа-Банк, Газпром межрегионгаз Тула"></div><div class="ticker" aria-label="Предложить кандидата — Платиновая сотня"><div class="ticker-track" id="ticker-track"><div class="ticker-set"><span class="pill pill-light">ПРЕДЛОЖИТЬ КАНДИДАТА</span><span class="pill pill-dark">ПЛАТИНОВАЯ СОТНЯ</span><span class="pill pill-light">ПРЕДЛОЖИТЬ КАНДИДАТА</span><span class="pill pill-dark">ПЛАТИНОВАЯ СОТНЯ</span></div><div class="ticker-set" aria-hidden="true"><span class="pill pill-light">ПРЕДЛОЖИТЬ КАНДИДАТА</span><span class="pill pill-dark">ПЛАТИНОВАЯ СОТНЯ</span><span class="pill pill-light">ПРЕДЛОЖИТЬ КАНДИДАТА</span><span class="pill pill-dark">ПЛАТИНОВАЯ СОТНЯ</span></div></div></div></div></a><script nonce="%request.eid1%">(function(){
