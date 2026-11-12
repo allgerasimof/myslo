@@ -1,0 +1,73 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Адрес. Тула — зима</title><style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}body{font-family:Arial,Helvetica,sans-serif;background:#172e44}.banner{position:relative;width:100%;height:100%;overflow:hidden;isolation:isolate;cursor:pointer;color:white}.scene{position:absolute;inset:0;background-size:cover;background-position:center;animation:scenes 18s infinite;transform:scale(1.025)}.scene:nth-child(1){background-image:url('winter-1.jpg');animation-delay:0s}.scene:nth-child(2){background-image:url('winter-2.jpg');animation-delay:-12s}.scene:nth-child(3){background-image:url('winter-3.jpg');animation-delay:-6s}@keyframes scenes{0%,28%{opacity:1;transform:scale(1.02)}34%,94%{opacity:0;transform:scale(1.09)}100%{opacity:1;transform:scale(1.02)}}.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,27,44,.91) 0%,rgba(10,27,44,.78) 38%,rgba(10,27,44,.08) 100%)}.content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:clamp(16px,5%,48px);gap:clamp(7px,2.5vh,19px);max-width:78%;z-index:2}.eyebrow{font-size:clamp(10px,2.7vw,17px);letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#f3b58b}.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:clamp(26px,8vw,67px);line-height:.94;letter-spacing:-.05em}.brand small{font-size:.27em;letter-spacing:.04em;align-self:flex-end;margin-bottom:.15em}.rule{height:3px;width:48px;background:#d87650}.message{font-size:clamp(15px,4.1vw,34px);line-height:1.13;font-weight:700;max-width:610px;text-wrap:balance}.cta{display:inline-block;background:#c45e3b;color:white;padding:11px 19px;border-radius:4px;font-size:clamp(11px,2.5vw,16px);font-weight:700;margin-top:3px}.snow{position:absolute;inset:-20%;pointer-events:none;z-index:3;background-image:radial-gradient(2px 2px at 20px 30px,#fff9 50%,transparent 60%),radial-gradient(2px 2px at 80px 110px,#fffa 50%,transparent 60%);background-size:150px 150px,220px 220px;animation:snow 13s linear infinite;opacity:.48}@keyframes snow{to{transform:translate3d(-25px,140px,0)}}@media(max-aspect-ratio:3/4){.scene{background-position:58% center}.shade{background:linear-gradient(180deg,rgba(10,27,44,.85) 0%,rgba(10,27,44,.58) 47%,rgba(10,27,44,.10) 100%)}.content{inset:0 0 auto;max-width:100%;padding:20px 14px;gap:12px;align-items:flex-start}.brand{font-size:clamp(30px,12vw,48px)}.message{font-size:clamp(19px,7vw,30px)}.cta{font-size:13px;padding:10px 13px}}@media(min-aspect-ratio:2/1){.content{max-width:65%}.brand{font-size:clamp(32px,6vw,65px)}.message{font-size:clamp(17px,3vw,32px)}}@media(prefers-reduced-motion:reduce){.scene,.snow{animation:none}.scene:not(:first-child){display:none}}
+@media (max-height: 220px) {
+  .content {
+    inset: 0;
+    max-width: none;
+    padding: 12px 14px;
+    gap: 6px;
+  }
+  .eyebrow { font-size: 10px; }
+  .brand img { max-width: 158px; }
+  .rule { display: none; }
+  .message { font-size: clamp(15px, 5vw, 21px); }
+  .cta { margin-top: 2px; padding: 8px 12px; font-size: 12px; }
+}
+@media (max-height: 220px) and (min-width: 480px) {
+  .scene {
+    inset: 0 0 0 max(41%, calc(100% - 840px));
+    background-position: center 50%;
+  }
+  .shade {
+    background: linear-gradient(90deg, #172e44 0%, #172e44 max(40%, calc(100% - 850px)), rgba(23,46,68,0) max(65%, calc(100% - 565px)));
+  }
+  .content {
+    left: max(0px, calc((100% - 1600px) / 2));
+    right: auto;
+    width: min(59%, 720px);
+    padding: 14px clamp(20px, 3.5vw, 56px);
+    gap: 8px;
+  }
+  .eyebrow { font-size: clamp(10px, 1.1vw, 12px); }
+  .brand img { max-width: clamp(145px, 16vw, 198px); }
+  .message {
+    font-size: clamp(17px, 2.35vw, 29px);
+    text-wrap: wrap;
+  }
+  .cta { padding: 9px 14px; font-size: clamp(12px, 1.2vw, 15px); }
+}
+
+/* Keep the terrace group below the copy in tall and square slots. */
+@media (min-height: 350px) and (max-width: 450px) {
+  .scene:nth-child(2) {
+    background-image: url('winter-2-portrait.jpg');
+    background-position: 47% bottom;
+  }
+}
+@media (min-height: 350px) and (max-width: 300px) {
+  .scene:nth-child(2) { background-size: auto 116%; }
+}
+@media (min-height: 350px) and (min-width: 301px) and (max-width: 450px) {
+  .scene:nth-child(2) { background-position: 50% 93%; }
+  .shade {
+    background: linear-gradient(180deg, rgba(10,27,44,.86), rgba(10,27,44,.42) 44%, transparent 78%);
+  }
+  .content { inset: 0 0 auto; max-width: 100%; padding: 20px 14px; }
+}
+@media (min-height: 350px) and (min-width: 451px) and (max-width: 760px) {
+  .scene:nth-child(2) {
+    inset-inline-start: 36%;
+    background-position: 14% center;
+    mask-image: linear-gradient(90deg, transparent, #000 24%);
+  }
+  .content { max-width: 54%; }
+}
+@media (max-height: 220px) and (min-width: 480px) {
+  .scene:nth-child(2) { background-position: center 63%; }
+}
+</style></head><body><div class="banner" id="banner" role="link" tabindex="0" aria-label="Перейти к проекту Адрес. Тула"><div class="scene"></div><div class="scene"></div><div class="scene"></div><div class="shade"></div><div class="content"><div class="eyebrow">Спецпроект Myslo</div><div class="brand"><img src="logo.png" alt="АДРЕС. ТУЛА" style="display:block;width:clamp(125px,24vw,250px);height:auto;image-rendering:auto"></div><div class="rule"></div><div class="message">Всё о новостройках Тулы на одной платформе</div><div class="cta">Смотреть новостройки →</div></div><div class="snow"></div></div><script>
+/* Adfox click handling: no fallback URL in preview. */
+var flashVars={reference:'%reference%',link:'%user1%',target:'%target%',rnd:'%random1%'};
+function clickAdfox(){var url=flashVars.link;if(!url||url.indexOf('%')!==-1)return;window.open(url,flashVars.target&&flashVars.target.indexOf('%')===-1?flashVars.target:'_blank')}
+document.getElementById('banner').addEventListener('click',clickAdfox);document.getElementById('banner').addEventListener('keydown',function(e){if(e.key==='Enter')clickAdfox()});
+</script></body></html>
