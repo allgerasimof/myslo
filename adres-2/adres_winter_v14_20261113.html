@@ -1,0 +1,172 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Адрес. Тула — зима</title><style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}body{font-family:Arial,Helvetica,sans-serif;background:#172e44}.banner{display:block;text-decoration:none;position:relative;width:100%;height:100%;overflow:hidden;isolation:isolate;cursor:pointer;color:white}.scene{position:absolute;inset:0;background-size:cover;background-position:center;animation:scenes 18s infinite;transform:scale(1.025)}.scene:nth-child(1){background-image:url('../adres/winter_1.jpg');animation-delay:0s}.scene:nth-child(2){background-image:url('../adres/winter_2_terrace_v8.jpg');animation-delay:-12s}.scene:nth-child(3){background-image:url('../adres/winter_3.jpg');animation-delay:-6s}@keyframes scenes{0%,28%{opacity:1;transform:scale(1.02)}34%,94%{opacity:0;transform:scale(1.09)}100%{opacity:1;transform:scale(1.02)}}.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,27,44,.91) 0%,rgba(10,27,44,.78) 38%,rgba(10,27,44,.08) 100%)}.content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:clamp(16px,5%,48px);gap:clamp(7px,2.5vh,19px);max-width:78%;z-index:2}.eyebrow{font-size:clamp(10px,2.7vw,17px);letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#f3b58b}.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:clamp(26px,8vw,67px);line-height:.94;letter-spacing:-.05em}.brand small{font-size:.27em;letter-spacing:.04em;align-self:flex-end;margin-bottom:.15em}.rule{height:3px;width:48px;background:#d87650}.message{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:clamp(15px,4.1vw,34px);line-height:1.13;font-weight:400;max-width:610px;text-wrap:balance}.cta{display:inline-block;background:#c45e3b;color:white;padding:11px 19px;border-radius:4px;font-size:clamp(11px,2.5vw,16px);font-weight:700;margin-top:3px}@media(max-aspect-ratio:3/4){.scene{background-position:58% center}.shade{background:linear-gradient(180deg,rgba(10,27,44,.85) 0%,rgba(10,27,44,.58) 47%,rgba(10,27,44,.10) 100%)}.content{inset:0 0 auto;max-width:100%;padding:20px 14px;gap:12px;align-items:flex-start}.brand{font-size:clamp(30px,12vw,48px)}.message{font-size:clamp(19px,7vw,30px)}.cta{font-size:13px;padding:10px 13px}}@media(min-aspect-ratio:2/1){.content{max-width:65%}.brand{font-size:clamp(32px,6vw,65px)}.message{font-size:clamp(17px,3vw,32px)}}@media(prefers-reduced-motion:reduce){.scene,.snow{animation:none}.scene:not(:first-child){display:none}}
+@media (max-height: 220px) {
+  .content {
+    inset: 0;
+    max-width: none;
+    padding: 12px 14px;
+    gap: 6px;
+  }
+  .eyebrow { font-size: 10px; }
+  .brand img { max-width: 158px; }
+  .rule { display: none; }
+  .message { font-size: clamp(15px, 5vw, 21px); }
+  .cta { margin-top: 2px; padding: 8px 12px; font-size: 12px; }
+}
+/* Frame the terrace from the bottom to keep the seated group in view. */
+.scene:nth-child(2) { background-position: 46% 89%; }
+
+@media (max-aspect-ratio: 3/4) {
+  .scene:nth-child(2) { background-position: 44% bottom; }
+}
+
+@media (min-height: 350px) and (min-width: 301px) and (max-width: 450px) {
+  .shade {
+    background: linear-gradient(180deg, rgba(10,27,44,.86), rgba(10,27,44,.42) 44%, transparent 78%);
+  }
+  .content { inset: 0 0 auto; max-width: 100%; padding: 20px 14px; }
+}
+
+@media (min-height: 350px) and (min-width: 451px) and (min-aspect-ratio: 5/4) {
+  .content { inset: 0 0 auto; max-width: 54%; }
+  .shade {
+    background: linear-gradient(145deg, rgba(10,27,44,.90), rgba(10,27,44,.72) 35%, rgba(10,27,44,.12) 73%, transparent);
+  }
+}
+
+@media (max-height: 220px) and (min-width: 480px) {
+  .scene {
+    --pan: clamp(0px, (56.28vw - 100vh) * .2, 24px);
+    transform: none;
+    background-position: center var(--framing);
+  }
+  .scene:nth-child(1) { --framing: 66%; }
+  .scene:nth-child(2) { --framing: 86%; --pan: 12px; }
+  .scene:nth-child(3) { --framing: 79%; }
+  .shade {
+    background: linear-gradient(90deg, rgba(10,27,44,.78), rgba(10,27,44,.54) min(35%, 440px), transparent min(74%, 980px));
+  }
+  .content {
+    width: min(66%, 560px);
+    padding: 12px clamp(20px, 4vw, 72px);
+    gap: 6px;
+  }
+  .eyebrow { font-size: 10px; }
+  .brand img { max-width: 145px; }
+  .message {
+    font-size: clamp(15px, 1.8vw, 21px);
+    max-width: 340px;
+    text-wrap: wrap;
+  }
+  .cta { margin-top: 3px; padding: 8px 12px; font-size: 12px; }
+}
+
+@media (max-height: 220px) and (min-width: 1000px) {
+  .scene:nth-child(2) {
+    --framing: calc(50% + .74vw - 71px);
+    --pan: 17px;
+    background-image: url('../adres/winter_2_wide_v11.jpg');
+    transform: scaleX(-1);
+  }
+}
+
+@media (max-height: 220px) and (min-width: 480px) and (prefers-reduced-motion: no-preference) {
+  .scene {
+    animation-name: wide-scenes;
+    animation-timing-function: linear;
+  }
+}
+
+/* Move through the crop while visible and reset between appearances. */
+@keyframes wide-scenes {
+  0% { opacity: 1; background-position: center calc(var(--framing) + var(--pan) * .7); }
+  28% { opacity: 1; background-position: center calc(var(--framing) - var(--pan) * .7); }
+  34% { opacity: 0; background-position: center calc(var(--framing) - var(--pan)); }
+  94% { opacity: 0; background-position: center calc(var(--framing) + var(--pan)); }
+  100% { opacity: 1; background-position: center calc(var(--framing) + var(--pan) * .7); }
+}
+
+.snow {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .snow { display: none; }
+}
+@media (min-width:380px) and (max-width:430px) and (min-height:350px){.message{max-width:310px;font-size:24px;line-height:1.17;text-wrap:wrap}}.keep-together{white-space:nowrap}</style></head><body><a class="banner" id="banner" href="%banner.reference_mrc_user1%" target="%banner.target%" rel="noopener" aria-label="Перейти к проекту Адрес. Тула"><div class="scene"></div><div class="scene"></div><div class="scene"></div><div class="shade"></div><div class="content"><div class="eyebrow">Спецпроект Myslo</div><div class="brand"><img src="../adres/logo.png" alt="АДРЕС. ТУЛА" style="display:block;width:clamp(125px,24vw,250px);height:auto;image-rendering:auto"></div><div class="rule"></div><div class="message">Всё о новостройках Тулы <span class="keep-together">на одной</span> платформе</div><div class="cta">Смотреть новостройки →</div></div><canvas class="snow" aria-hidden="true"></canvas></a><script nonce="%request.eid1%">
+const banner = document.getElementById('banner');
+banner.addEventListener('click', function (event) {
+  if (banner.getAttribute('href').startsWith('%')) event.preventDefault();
+});
+
+const snow = banner.querySelector('.snow');
+const ctx = snow.getContext('2d');
+const motion = matchMedia('(prefers-reduced-motion: reduce)');
+let width = 0;
+let height = 0;
+let flakes = [];
+let frame = 0;
+let previous = 0;
+
+function resizeSnow() {
+  width = banner.clientWidth;
+  height = banner.clientHeight;
+  const scale = Math.min(devicePixelRatio || 1, 2);
+  snow.width = Math.round(width * scale);
+  snow.height = Math.round(height * scale);
+  ctx.setTransform(scale, 0, 0, scale, 0, 0);
+  const count = Math.min(150, Math.round(width * height / 2600));
+  flakes = Array.from({ length: count }, () => {
+    const depth = Math.random();
+    return {
+      x: Math.random() * width,
+      y: Math.random() * height,
+      radius: .45 + depth * .65,
+      opacity: .26 + depth * .43,
+      speed: 8 + depth * 18,
+      phase: Math.random() * Math.PI * 2,
+      sway: 1 + Math.random() * 5
+    };
+  });
+}
+
+function drawSnow(now) {
+  const dt = previous ? Math.min((now - previous) / 1000, .05) : 0;
+  previous = now;
+  ctx.clearRect(0, 0, width, height);
+  for (const flake of flakes) {
+    flake.phase += dt * .9;
+    flake.x += (2 + Math.sin(flake.phase) * flake.sway) * dt;
+    flake.y += flake.speed * dt;
+    if (flake.y > height + 2) {
+      flake.y = -2;
+      flake.x = Math.random() * width;
+    }
+    if (flake.x > width + 2) flake.x = -2;
+    if (flake.x < -2) flake.x = width + 2;
+    ctx.beginPath();
+    ctx.fillStyle = 'rgba(248,252,255,' + flake.opacity + ')';
+    ctx.ellipse(flake.x, flake.y, flake.radius * .78, flake.radius, -.2, 0, Math.PI * 2);
+    ctx.fill();
+  }
+  frame = requestAnimationFrame(drawSnow);
+}
+
+function updateSnow() {
+  cancelAnimationFrame(frame);
+  previous = 0;
+  if (!motion.matches && !document.hidden) frame = requestAnimationFrame(drawSnow);
+}
+
+if (ctx) {
+  resizeSnow();
+  new ResizeObserver(resizeSnow).observe(banner);
+  motion.addEventListener('change', updateSnow);
+  document.addEventListener('visibilitychange', updateSnow);
+  updateSnow();
+}
+</script></body></html>
