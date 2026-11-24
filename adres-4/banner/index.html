@@ -67,11 +67,14 @@
   .cta { margin-top: 3px; padding: 8px 12px; font-size: 12px; }
 }
 
-@media (max-width: 280px) and (max-aspect-ratio: 3/4) {
+@media (max-aspect-ratio: 3/4) {
   .scene:nth-child(2) {
-    background-size: auto 118%;
-    --y: 10%;
+    background-size: auto 165%;
+    --x: 46.5%;
+    --y: 0%;
   }
+}
+@media (max-width: 280px) and (max-aspect-ratio: 3/4) {
   .scene:nth-child(3) {
     background-size: auto 113%;
     --y: 20%;
@@ -82,7 +85,7 @@
 }
 @media (min-aspect-ratio: 5/2) {
   .scene { animation-name: wide-drift; }
-  .scene:nth-child(2) { --x: 50%; --y: 44%; animation-name: courtyard, wide-drift; }
+  .scene:nth-child(2) { --x: 50%; --y: 24%; animation-name: courtyard, wide-drift; }
   .scene:nth-child(3) { --y: 49%; animation-name: aerial, wide-drift; }
   @keyframes wide-drift {
     0%, 100% { background-position: var(--x) calc(var(--y) + 4%); }
