@@ -14,14 +14,11 @@ body { font: 14px Arial,sans-serif }
   background:linear-gradient(180deg,#294ab1 0%,#086dc8 31%,#148ed7 59%,#8cc8f0 80%,#e5eef9 91%);
 }
 .banner:focus-visible { outline:3px solid white; outline-offset:-4px }
-.ground {
-  position:absolute; inset:auto -15% -13% -15%; height:37%; border-radius:48% 55% 0 0 / 23% 23% 0 0;
-  background:linear-gradient(180deg,#c3ddf5 0%,#e8f0fc 48%,#edf3fc 100%);
-}
-.ground::after {
-  content:""; position:absolute; inset:12% 0 0; opacity:.45;
-  background:url("assets/snow.jpg") center top / auto 55px repeat;
-  mask-image:linear-gradient(transparent,#000 56%);
+.backdrop {
+  position:absolute; inset:0;
+  background:
+    linear-gradient(180deg,#294ab1 2%,#126fc8 22%,rgba(13,113,199,.78) 35%,transparent 57%),
+    url("assets/winter.jpg") center bottom / auto max(75%,56.25vw) no-repeat;
 }
 img { display:block; object-fit:contain }
 .brands {
@@ -71,7 +68,11 @@ img { display:block; object-fit:contain }
   .tent { right:-1%; bottom:13%; height:69% }
   .krosh { left:auto; right:25%; bottom:10%; height:56% }
   .nyusha { right:-1%; bottom:7%; height:52% }
-  .ground { height:44% }
+  .backdrop::after {
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(90deg,rgba(11,100,189,.91),rgba(11,100,189,.8) 42%,transparent 65%);
+    mask-image:linear-gradient(transparent 13%,#000 34%,#000 57%,transparent 84%);
+  }
   .age { top:6%; bottom:auto; filter:brightness(0) invert(1) }
 }
 @media (prefers-reduced-motion:reduce) { .character { animation:none } }
@@ -79,7 +80,7 @@ img { display:block; object-fit:contain }
 </head>
 <body>
 <a class="banner" id="banner" href="%banner.reference_mrc_user1%" target="%banner.target%" aria-label="Смешарики. Главная ёлка Тулы. Цирковое новогоднее шоу с 11 декабря, 0+">
-  <div class="ground" aria-hidden="true"></div>
+  <div class="backdrop" aria-hidden="true"></div>
   <img class="tent" src="assets/circus.png" alt="">
   <img class="character krosh" src="assets/krosh.png" alt="">
   <img class="character nyusha" src="assets/nyusha.png" alt="">
