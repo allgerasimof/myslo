@@ -113,8 +113,31 @@
 }
 @media (max-height: 220px) and (min-width: 480px) {
   .scene:nth-child(3) {
-    background-position: 74% calc(100% + clamp(0px, (56vw - 100vh), 30px));
+    /* The rendered image is 2048 × 1143. Cap the offset at its available overflow. */
+    --window-overflow: max(0px, calc(55.81vw - 100vh));
+    --window-end: min(30px, var(--window-overflow));
+    --window-start: min(48px, var(--window-overflow));
+    background-position: 74% calc(100% + var(--window-end));
   }
+}
+@media (max-height: 220px) and (min-width: 480px) and (prefers-reduced-motion: no-preference) {
+  .scene:nth-child(3) { animation-name: wide-window-scene; }
+}
+@keyframes wide-window-scene {
+  0% {
+    opacity: 1;
+    background-position: 74% calc(100% + var(--window-start));
+  }
+  28%, 34% {
+    background-position: 74% calc(100% + var(--window-end));
+  }
+  28% { opacity: 1; }
+  34% { opacity: 0; }
+  94%, 100% {
+    background-position: 74% calc(100% + var(--window-start));
+  }
+  94% { opacity: 0; }
+  100% { opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
   .scene:nth-child(3) { animation: none; }
