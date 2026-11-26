@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Смешарики — Главная ёлка Тулы</title>
+<style>
+* { box-sizing:border-box }
+html, body { margin:0; width:100%; height:100%; overflow:hidden }
+body { font: 14px Arial,sans-serif }
+.banner {
+  position:relative; display:block; height:100%; overflow:hidden; isolation:isolate;
+  color:#101d61; text-decoration:none;
+  background:linear-gradient(180deg,#294ab1 0%,#086dc8 31%,#148ed7 59%,#8cc8f0 80%,#e5eef9 91%);
+}
+.banner:focus-visible { outline:3px solid white; outline-offset:-4px }
+.ground {
+  position:absolute; inset:auto -15% -13% -15%; height:37%; border-radius:48% 55% 0 0 / 23% 23% 0 0;
+  background:linear-gradient(180deg,#c3ddf5 0%,#e8f0fc 48%,#edf3fc 100%);
+}
+.ground::after {
+  content:""; position:absolute; inset:12% 0 0; opacity:.45;
+  background:url("assets/snow.jpg") center top / auto 55px repeat;
+  mask-image:linear-gradient(transparent,#000 56%);
+}
+img { display:block; object-fit:contain }
+.brands {
+  position:absolute; top:4.5%; left:5%; right:5%; height:10%;
+  display:grid; grid-template-columns:1fr 1.8fr 1fr; gap:9%; align-items:center;
+}
+.brands img { width:100%; height:100%; min-height:0; max-height:100%; object-fit:contain }
+.copy {
+  position:absolute; top:18%; left:6%; width:88%; height:24%; z-index:2;
+  display:grid; grid-template-rows:15% 61% 24%; justify-items:center; align-items:center;
+}
+.show { width:95%; height:100% }
+.title { width:100%; height:91% }
+.date { width:63%; height:100%; border-radius:9px; object-fit:contain }
+.tent { position:absolute; right:-2%; bottom:8%; width:auto; height:48%; }
+.character { position:absolute; bottom:8%; width:auto; max-width:none; transform-origin:50% 90%; }
+.krosh { left:-5%; height:47%; animation:bob 4s ease-in-out infinite; }
+.nyusha { right:-2%; height:43%; animation:bob 4.8s ease-in-out -.7s infinite; }
+@keyframes bob { 0%,100% { transform:translateY(0) rotate(0) } 50% { transform:translateY(-2.6%) rotate(1.4deg) } }
+.age { position:absolute; right:4%; bottom:5%; width:clamp(19px,7vw,38px); z-index:3 }
+.legal {
+  position:absolute; bottom:1.3%; inset-inline:4%; z-index:3;
+  display:flex; flex-wrap:wrap; justify-content:space-between; gap:0 .7em;
+  font-size:clamp(6px,1.38vw,8px); line-height:1.1;
+}
+@media (max-aspect-ratio:3/4) {
+  .copy { top:17%; height:24% }
+  .tent { right:-10%; bottom:22%; height:37% }
+  .krosh { left:-5%; width:60%; height:auto; bottom:13% }
+  .nyusha { right:-3%; width:49%; height:auto; bottom:10% }
+}
+@media (min-aspect-ratio:4/5) and (max-aspect-ratio:6/5) {
+  .krosh { left:0; height:51%; bottom:7% }
+  .nyusha { right:0; height:47%; bottom:9% }
+  .tent { right:0; height:53%; bottom:10% }
+}
+@media (max-aspect-ratio:1/2) {
+  .brands { top:4%; height:8% }
+  .copy { top:14%; height:24% }
+  .tent { right:-12%; bottom:25%; height:38% }
+  .krosh { left:-9%; width:77%; bottom:25% }
+  .nyusha { right:-2%; width:63%; bottom:8.5% }
+}
+@media (min-aspect-ratio:6/5) {
+  .brands { top:9%; left:5%; width:43%; height:13%; gap:8% }
+  .copy { top:30%; left:4%; width:46%; height:36% }
+  .tent { right:-1%; bottom:13%; height:69% }
+  .krosh { left:auto; right:25%; bottom:10%; height:56% }
+  .nyusha { right:-1%; bottom:7%; height:52% }
+  .ground { height:44% }
+  .age { top:6%; bottom:auto; filter:brightness(0) invert(1) }
+}
+@media (prefers-reduced-motion:reduce) { .character { animation:none } }
+</style>
+</head>
+<body>
+<a class="banner" id="banner" href="%banner.reference_mrc_user1%" target="%banner.target%" aria-label="Смешарики. Главная ёлка Тулы. Цирковое новогоднее шоу с 11 декабря, 0+">
+  <div class="ground" aria-hidden="true"></div>
+  <img class="tent" src="assets/circus.png" alt="">
+  <img class="character krosh" src="assets/krosh.png" alt="">
+  <img class="character nyusha" src="assets/nyusha.png" alt="">
+  <div class="brands">
+    <img src="assets/mediatrast.png" alt="Медиа Траст">
+    <img src="assets/logo.png" alt="Смешарики">
+    <img src="assets/dkj.png" alt="ДКЖ, арт-резиденция">
+  </div>
+  <div class="copy">
+    <img class="show" src="assets/show.png" alt="Цирковое новогоднее шоу">
+    <img class="title" src="assets/title.png" alt="Главная ёлка Тулы">
+    <img class="date" src="assets/date.png" alt="С 11 декабря">
+  </div>
+  <img class="age" src="assets/age.png" alt="0+">
+  <div class="legal">
+    <span>©ООО «Смешарики», 2003</span>
+    <span>ООО «Большой манеж» ОГРН 1236600036573 · Свердловская область, М.О. Ивдельский, г. Ивдель</span>
+  </div>
+</a>
+<script nonce="%request.eid1%">
+const banner = document.getElementById('banner');
+banner.addEventListener('click', event => {
+  const url = banner.getAttribute('href');
+  if (!url || url.startsWith('%banner.')) event.preventDefault();
+});
+</script>
+</body>
+</html>
