@@ -151,7 +151,11 @@
   }
 
   .scene { left: var(--panel-width); }
-  .shade { display: none; }
+  .shade {
+    left: var(--panel-width);
+    width: clamp(88px, 9vw, 160px);
+    background: linear-gradient(90deg, #142b40, rgba(20, 43, 64, .48) 45%, transparent);
+  }
   .snow { clip-path: inset(0 0 0 var(--panel-width)); }
   .content {
     width: var(--panel-width);
